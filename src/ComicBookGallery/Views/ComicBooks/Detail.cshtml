@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
 
@@ -12,22 +12,22 @@
 </head>
 <body>
     <div>
-        <h1>@ViewBag.seriesTitle</h1>
-        <h2>Issue #@ViewBag.IssueNumbr</h2>
+<h1>@ViewBag.SeriesTitle</h1>
+<h2>Issue #@ViewBag.IssueNumbr</h2>
 
-        <h5>Desription:</h5>
-        <h5>@Html.Raw(ViewBag.Description)</h5>
+<h5>Desription:</h5>
+<h5>@Html.Raw(ViewBag.Description)</h5>
 @if (ViewBag.Artists.Length > 0)
 {
-    <h5>Artists:</h5>
-            <div>
-                <ul>
-                    @foreach (var artist in ViewBag.Artists)
-                    {
-                        <li>@artist</li>
-                    }
-                </ul>
-            </div>
+<h5>Artists:</h5>
+    <div>
+        <ul>
+            @foreach (var artist in ViewBag.Artists)
+            {
+                <li>@artist</li>
+            }
+        </ul>
+    </div>
 }
 
     </div>
