@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>@ViewBag.seriesTitle</h1>
+        <h2>Issue #@ViewBag.IssueNumbr</h2>
+
+        <h5>Desription:</h5>
+        <h5>@Html.Raw(ViewBag.Description)</h5>
+@if (ViewBag.Artists.Length > 0)
+{
+    <h5>Artists:</h5>
+            <div>
+                <ul>
+                    @foreach (var artist in ViewBag.Artists)
+                    {
+                        <li>@artist</li>
+                    }
+                </ul>
+            </div>
+}
+
+    </div>
+</body>
+</html>
